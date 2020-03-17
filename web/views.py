@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.utils import timezone
+#from django.utils import timezone
+from pytz import utc, timezone
 
 from datetime import timedelta, datetime
 from .models import Publication, Patent, Notice, News,RelatedProject, AutoNews, CompanyList
@@ -56,7 +57,7 @@ class AutomaticNewsList(ListView):
         filters.reverse()
         paginator = Paginator(filters, self.paginate_by)
         page = request.GET.get('page')
-        #if your django version 2.0.4 just you get_page
+        #if your django version 2.0.4 just get_page
         if page == None:
             page = 1
         filter_list = paginator.page(page)
@@ -79,10 +80,11 @@ class AutomaticNewsDetail(DetailView):
         autonews = AutoNews.objects.get(pk = pk)
         my_company = autonews.company
         my_datetime = autonews.datetime
-
+        KST = timezone('Asia/Seoul')
+        
         predict_date = my_datetime.date()+timedelta(days=28)
-        today = datetime.today().date()
-        is_future = predict_date > today
+        today = KST.localize(datetime.now())
+        is_future = predict_date > today.date()
         predict = AutoNews.objects.filter(company=my_company, datetime__icontains=predict_date).values('id')
         predict_id = predict.values('id')
 
@@ -91,10 +93,10 @@ class AutomaticNewsDetail(DetailView):
             predict_pk = predict_id[0]['id']
 
         only_2018 = ['amorepacific','hyundaimobis','lghousehold','samsungcnt','samsungsds']
-        last_2018_date = datetime(2018, 11, 30, 23, 59)
+        last_2018_date = datetime(2018, 12, 31, 23, 59, 59, 0).replace(tzinfo=KST)
 
         is_only_2018 = False
-        if my_company in only_2018 and my_datetime > last_2018_date :
+        if my_company in only_2018 and my_datetime.date() > last_2018_date.date() :
             is_only_2018 = True
 
         # print("predict_pk", predict_pk)
