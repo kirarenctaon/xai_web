@@ -1,0 +1,43 @@
+from django.conf.urls import url, include
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    # url(r'^(?P<subMenu>.+)/$', views.subMenu, name='subMenu'),
+
+    # List
+    url(r'^about/greeting/$', views.GreetingPage, name='greeting'),
+    url(r'^about/member/$', views.MemberImageList, name='member'),
+    url(r'^about/lab/$', views.LabTextList, name='lab'),
+    url(r'^about/introduction/$', views.ProjectPage, name='introduction'),
+
+    url(r'^news&info/notice/$', views.NoticeTextList, name='notice'),
+    url(r'^news&info/news/$', views.NewsImageList, name='news'),
+
+    url(r'^research/automatic_news/$', views.AutomaticNews.as_view(), name='autonews'),
+    url(r'^research/automatic_news/list/(?P<company>.+)/$', views.AutomaticNewsList.as_view(), name='autonews_list'),
+    url(r'^research/automatic_news/detail/(?P<pk>\d+)/$', views.AutomaticNewsDetail.as_view(), name='autonews_detail'),
+
+    # url(r'^research/demoresource/$', views.DemoresourceImageList.as_view(), name='demoresource'),
+    url(r'^research/unist_index/$', views.financialIndex, name='financial_index'),
+    url(r'^research/stock_commodity/$', views.stock, name='stock_commodity'),
+    url(r'^research/publication/$', views.PublicationTextList.as_view(), name='publication'),
+    url(r'^research/patent/$', views.PatentTextList.as_view(), name='patent'),
+
+    #opensource
+    url(r'^opensource/github/$', views.githubRedirect, name='github'),
+    url(r'^opensource/relatedproject/$', views.RelatedProject.as_view(), name='relatedproject'),
+    url(r'^opensource/youtube/$', views.youtubeRedirect, name='youtube'),
+    url(r'^opensource/opendata/$', views.OpenData, name='opendata'),
+
+    # Symposium
+    url(r'^Symposium/2018/$', views.Symposium, name='Symposium18'),
+    url(r'^Symposium/2018/korean/$', views.Symposium_ko, name='Symposium18_ko'),
+    url(r'^popups/2018/$', views.Popup, name='popup'),
+    url(r'^workshop/2019/$', views.Workshop19, name='Workshop19'),
+    url(r'^Tutorial/2018/$', views.Tutorial19, name='Tutorial19'),
+
+    #contact
+    url(r'^contact/$', views.Contact, name='contact'),
+]

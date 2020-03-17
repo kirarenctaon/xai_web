@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125871134-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125871134-2');
+</script>
+
+
+<title>{% block title %}XAIC{% endblock %}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://bootstraptaste.com" />
+
+{% load static %}
+<link rel="stylesheet" href={% static "css/bootstrap.min.css"%} />
+<link rel="stylesheet" href={% static "css/fancybox/jquery.fancybox.css"%} />
+<link rel="stylesheet" href={% static "css/jcarousel.css"%} />
+<link rel="stylesheet" href={% static "css/flexslider.css"%} />
+<link rel="stylesheet" href={% static "css/style_2.css"%} />
+<link rel="stylesheet" href={% static "css/autonews.css"%} />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!-- Theme skin -->
+<link rel="stylesheet" href={% static "skins/default.css"%} />
+<!-- favicon -->
+<link rel="icon" href={% static "img/logos/XAIC_favicon.ico"%}” type="image/x-icon" />
+<link rel="shortcut icon" href={% static "img/logos/XAIC_favicon.ico"%} type="image/x-icon"/>
+</head>
+
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+		{% block header %}
+
+		{% endblock header %}
+	</header>
+</div>
+
+{% block content %}
+
+{% endblock content %}
+<footer>
+   <div class="container">
+      <div class="row">
+            <div class="widget">
+               <address>
+               <strong>XAIC</strong>
+                <div class="copyright">
+                    <p>&copy; 2020 E<strong>x</strong>plainable <strong>A</strong>rtificial <strong>I</strong>ntelligence Center. All right reserved.</p>
+               </div>
+            </div>
+      </div>
+   </div>
+ </footer>
+
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src={% static "js/jquery.js" %}></script>
+<script src={% static "js/jquery.easing.1.3.js" %}></script>
+<script src={% static "js/bootstrap.min.js" %}></script>
+<script src={% static "js/jquery.fancybox.pack.js" %}></script>
+<script src={% static "js/jquery.fancybox-media.js" %}></script>
+<script src={% static "js/google-code-prettify/prettify.js" %}></script>
+<script src={% static "js/portfolio/jquery.quicksand.js" %}></script>
+<script src={% static "js/portfolio/setting.js" %}></script>
+<script src={% static "js/jquery.flexslider.js" %}></script>
+<script src={% static "js/animate.js" %}></script>
+<script src={% static "js/custom.js" %}></script>
+{% block script %}
+{% endblock script %}
+
+</html>

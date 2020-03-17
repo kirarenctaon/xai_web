@@ -1,0 +1,239 @@
+{% extends "web/index.html" %} {% block content %} {% load static%}
+<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Tutorial</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="lead">
+	<div class="row">
+		<!--<ul class="nav nav-tabs">-->
+			<!--<li class="active"><a href="#English" data-toggle="tab"><i class="icon-briefcase"></i> English</a></li>-->
+			<!--<li><a  href ='{% url 'Symposium18_ko' %}' >한국어</a></li>-->
+		<!--</ul>-->
+		<div class="tab-content">
+			<div class="tab-pane active" id="English">
+				<div class="col-lg-12">
+					<div class="post-image">
+						<div class="post-heading">
+							<h1 align="center"><a href="https://www.pycon.kr/timetable/tutorial"><img src={% static "img/event/pyconlogo.svg" %}></a>
+								<span style="color:#F95858">튜토리얼</span></h1>
+							<br>
+							<h2>딥러닝 안에서 일어나는 과정을 해석하는 설명가능인공지능 기술</h2>
+							<h4><a href="https://www.pycon.kr/program/tutorial-detail?id=173">https://www.pycon.kr/program/tutorial-detail?id=173</a>
+							<br><br>
+							<h4>2019년 8월 16일(금) 14:00-18:00</h4>
+							<h4>서울 코엑스 그랜드볼룸 203호</h4>
+
+						</div>
+						<div class="col-lg-12">
+							<div class="row">
+								<a href="#Introduction" class="btn btn-primary">Introduction</a>
+								<a href="#requirements" class="btn btn-warning">requirements </a>
+								<a href="#Presenters" class="btn btn-info">Presenters</a>
+								<a href="#Program" class="btn btn-theme">Program</a>
+								<a href="#Contact" class="btn btn-success">Contact</a>
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<a href="#" class="btn btn-danger btn-large">Introduction</a>
+					<br>
+					<br>
+					<article>
+						설명가능인공지능 연구센터는 과학기술정보통신부에서 설립한 연구센터로, 인공지능 모델의 결정을 인간이 이해하고 해석할 수 있는 수준의
+						설명을 제공하는 설명가능 인공지능(XAI: Explainable Artificial Intelligence) 기술을 연구합니다.
+						본 센터는 2017년 9월 개소하여, 주관기관인 UNIST를 비롯해 KAIST, 고려대학교, 서울대학교, 연세대학교와 AITRICS 소속 200여명의 연구원들이 세계적 수준의 연구를 진행하고 있으며,
+						미국 DARPA, 독일 베를린 빅데이터 센터등 해외 기관과 활발하게 교류하고 있습니다. <br><br>
+
+						본 센터는 인공지능 시스템의 의사결정 이유 설명 및 인터페이스 개발, 금융/의료/경제 분석 등 실세계 응용에 대해 연구를 진행하고 있으며,
+						주요한 결과물을 오픈소스로 홈페이지(http://xai.unist.ac.kr)를 통하여 공개하고 있습니다. <br><br>
+
+						이번 파이콘 한국 2019에서 인공지능에 관심이 있는 참가자분들이 파이썬을 이용하여 설명가능인공지능을 직접 구현하면서 배울 수 있는 튜토리얼을 진행합니다. 파이썬 사용자분들의 많은 관심과 적극적인 참여 부탁드립니다.
+					</article>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+					<a href="#" class="btn btn-primary btn-warning" id="requirements">requirements</a>
+					<br>
+					<br>
+					<div class="row">
+						<ul>
+							<li>실습을 위해서는 개인 노트북이 필요합니다.</li>
+							<li>실습은 구글 코랩에서 진행됩니다. 많은 인원이 동시에 인터넷을 사용할 경우 학습이 느려지기 때문에
+								개인적으로 딥러닝 학습이 가능한 실습환경 구축이 가능하신 경우 준비해오시는 것을 추천드립니다.</li>
+							<li>실습에서 사용될 소스 코드와 발표자료는 모두 XAI Github를 통해 공개할 예정입니다. 발표전까지 메일과 본 페이지에 공지 드리겠습니다. (<a href="https://google.com/">Google</a>과 <a href="https://github.com/">Github</a>에 미리 가입해주세요.)  </li>
+						</ul>
+						<br>
+						 <a href="https://github.com/OpenXAIProject/PyConKorea2019-Tutorials">https://github.com/OpenXAIProject/PyConKorea2019-Tutorials/</a>
+						<br>
+						<!-- XAI github -->
+						<!-- <br>
+						<a href="https://github.com/OpenXAIProject/PyConKorea2019-Tutorials">https://github.com/OpenXAIProject/PyConKorea2019-Tutorials</a>
+						<b -->
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+
+					<!-- Descriptions -->
+				<div class="row">
+					<div class="col-lg-12">
+					<a href="#" class="btn btn-primary btn-info" id="Presenters">Presenters</a>
+					<br>
+					<br>
+					<div class="row">
+						<img src={% static "img/event/pycon_member2.png" %}><br>
+					</div>
+					</div>
+				</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+				<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
+							<br>
+							<br>
+							<div class="pricing-box-alt special">
+								<div class="pricing-heading">
+								   <h3><strong>프로그램</strong> </h3>
+							    </div>
+							  <table class="table table-bordered">
+								  <thead>
+									<tr style="color: white; background-color:#393a3d;">
+									  <th style="text-align: center;">시간</th>
+									  <th style="text-align: center;">내용</th>
+									  <th style="text-align: center;">발표자</th>
+									</tr>
+								  </thead>
+								  <tbody  style="text-align: center;">
+									  <tr>
+										  <td>14:00 - 15:00</td>
+										  <td>설명가능인공지능(Explainable Artificial Intelligence, XAI)이란?</td>
+										  <td>최재식 교수</td>
+									  </tr>
+									  <tr>
+										  <td >15:00 - 15:20</td>
+										  <td>실습 환경 세팅</td>
+										  <td>조소희 연구원</td>
+									  </tr>
+									  <tr  style="background-color: #DFDDDD;">
+										  <td >15:20 - 15:40</td>
+										  <td colspan="2">쉬는 시간</td>
+									  </tr>
+									  <tr>
+										  <td>15:40 - 16:30</td>
+										  <td>레이어 단위 관련성 전파 모델(LRP) 튜토리얼<br>
+											: 이미지 데이터 분류 예제, 자연어 감정 분석 예제
+										  </td>
+										  <td>조소희 연구원</td>
+									  </tr>
+									  <tr  style="background-color: #DFDDDD;">
+										  <td >16:30 - 16:50</td>
+										  <td colspan="2">쉬는 시간</td>
+									  </tr>
+									  <tr>
+										  <td >16:50 - 17:40</td>
+										  <td>모델 불가지론적 방법 모델 (SHAP) 튜토리얼<br>
+											: SHapley Additive exPlanations (SHAP), Red Wine Quality
+										  </td>
+										  <td>허성만 연구원</td>
+									  </tr>
+									  <tr  style="background-color: #f2dede;">
+										  <td >17:40 - 18:00</td>
+										  <td colspan="2">질의 응답</td>
+									  </tr>
+								  </tbody>
+							  </table>
+							  *	위 일정은 추후 변경될 수 있습니다.
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
+								<br><br>
+								UNIST 설명가능인공지능 연구센터<br>
+								 &emsp; <strong>최재식</strong> / jaesik@unist.ac.kr / 052-217-2180<br>
+								 &emsp; <strong>조소희</strong> / shcho@unist.ac.kr / 052-217-2258<br>
+								 &emsp; <strong>허성만</strong>  / smheo@unist.ac.kr / 052-217-2258<br>
+								<br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+ {% endblock content %} {% block script %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
+<script>
+		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
+		var mapOptions = {
+		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
+		    zoom: 10
+		};
+		var map = new naver.maps.Map('naver-map', mapOptions);
+		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
+	</script>
+{% endblock script %}

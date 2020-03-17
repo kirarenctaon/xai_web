@@ -1,0 +1,56 @@
+{% extends "web/index.html" %}
+{% load static %}
+{% block content %}
+	<section id="inner-headline">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="breadcrumb">
+						<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+						<li class="active">Contact</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<br><br><br>
+					<div class="map">
+						<div id="map" style="width:100%;height:400px;"></div>
+	  				</div>
+					<dl class="dl-horizontal">
+						<h3>Expainable Artificail Intelligence Center</h3>
+						<dt>ADRESS</dt>
+						<dd>18F KINS Tower, 8, Seongnam-daero 331beon-gil, 
+						<br>Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</dd>
+						<dt>PHONE</dt>
+						<dd>031-8022-7530, 031-8022-7529</dd>
+						<dt>FAX</dt>
+						<dd>031-8022-7528</dd>
+						<dt>EMAIL</dt>
+						<dd>jaesik.choi@kaist.ac.kr</dd>
+                			</dl>
+				</div>
+			</div>
+		</div>
+
+	</section>
+{% endblock content %}
+	<!-- javascript
+    ================================================== -->
+{% block script %}
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=de2ae58c832bf10e28f8ec17090cecab"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.366087, 127.10645),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+{% endblock script %}
+

@@ -1,0 +1,115 @@
+{% extends "web/index.html" %}
+{% block content %} 
+<section id="inner-headline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="breadcrumb">
+                      <i class="fa fa-home"></i>
+                      <a class="active"><a style="color:white" href ="/research/automatic_news/list/{{autonews.company}}"> Automatic News / {{ autonews.company }}</a>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="content">
+    <div class="container">
+        <h2 class="titleHead" style="text-align:center;">{{ autonews.title}}</h2><br/>
+        <div class="date" style="text-align:right;">기사입력 {{ autonews.datetime | date:'Y-m-d H:i' }}</div>
+        <br>
+        <p class="indent"> {{ autonews.content }}</p>
+        <p class="indent"> {{ autonews.content2 }}</p>
+        <p class="indent"> <b>{{ autonews.prediction }}</b></p>
+        <!--<hr class="figure"/>-->
+        <br>
+        <div class="tabular">
+            <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
+                <tr id="TBL-2-1-" style="vertical-align:baseline;">
+                    <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_raw }}"/>
+                    </td>
+                    <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_predict }}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align:center;">
+             <span class="id"><strong>[그림 1]</strong></span>
+            {% if  autonews.id < 4000 %}
+             <span class="content">주가 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+            {% elif autonews.id > 4000 %}
+             <span class="content">선물가격 데이터(왼쪽)과 사후 분포 및 전망 예측(오른쪽)</span>
+            {% endif %}
+        </div>
+
+        <!--<hr class="endfigure"/>-->
+        <br>
+        <p class="indent"> {{ autonews.content3 }}</p>
+        <br>
+        <!--<hr class="figure"/>-->
+        <div class="tabular">
+            <table cellpadding="0" cellspacing="0" class="tabular" id="TBL-2">
+                <tr id="TBL-2-1-" style="vertical-align:baseline;">
+                    <td class="td11" id="TBL-2-1-1" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px" src="/static/upload/{{ autonews.image_first }}"/>
+                    </td>
+                    <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_second }}"/>
+                    </td>
+                     <td class="td11" id="TBL-2-1-2" style="white-space:nowrap; text-align:center;">
+                        <img alt="pict" width="400px"  src="/static/upload/{{ autonews.image_third }}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align:center;">
+            <span class="id"><strong>[그림 2]</strong></span>
+            {% if  autonews.id < 4000 %}
+             <span class="content">주가 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽)</span>
+            {% elif autonews.id > 4000 %}
+             <span class="content">선물 가격 예측 설명 추세선(장기-왼쪽, 중기-중간, 단기-오른쪽))</span>
+            {% endif %}
+        </div>
+        <!--<hr class="endfigure"/>-->
+        <br>
+    <p class="indent">이 기사는 "UNIST 설명가능인공지능 시스템"이 생성하였습니다.</p>
+    <p class="indent">* 본 예측은 베타버전이며 투자자들의 투자판단에 참고가 되는 정보제공을 목적으로 배포되는 자료입니다. 본 기사에 수록된 내용은 추정치로서 오차가 발생할 수 있으며 정확성이나 완벽성은 보장하지 않습니다.</p>
+    <br/>
+
+        <div class="col-lg-12" style="text-align:right; width:100%; padding:0;">
+            <a href="/static/upload/{{ autonews.report_pdf }}" class="btn btn-success btn-large btn-rounded"><i class='fas fa-download'></i> 자동 통계학자 보고서 다운로드 </a>
+            {% if predict_pk is not 0 %}
+                <a  class="btn btn-info btn-large btn-rounded" href="{% url 'autonews_detail' pk=predict_pk %}"><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</a>
+            {% else %}
+                {% if is_only_2018 %}
+                      <button id="only_18" class="btn btn-theme btn-large btn-rounded" onclick=not_2019()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% elif is_future or autonews.id > 4000 %}
+                     <button id="come" class="btn btn-theme btn-large btn-rounded" onclick=not_come()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% elif is_future is False %}
+                     <button id="exist" class="btn btn-theme btn-large btn-rounded" onclick=not_exist()><i class="fas fa-file-signature"></i> 예측 검증 [4주 후]</button>
+                {% endif%}
+                    <div id="alert"></div>
+            {% endif%}
+        </div>
+    </div>
+    <br/>
+</section>
+{% endblock content %}
+
+{% block script %}
+<script type="text/javascript">
+function not_come(){
+    $("#come").remove();
+    $('#alert').append('<br><div class="alert alert-info"><strong> 본 종목에 대한 4주 후 기사는 추후 업데이트 될 예정입니다.</strong></div>');
+}
+function not_exist(){
+     $("#exist").remove();
+     $('#alert').append('<br><div class="alert alert-warning"><strong>본 종목에 대한 4주 후 기사는 주식시장 휴장으로 제공되지 않습니다. </strong></div>');
+}
+function not_2019(){
+    $("#only_18").remove();
+    $('#alert').append('<br><div class="alert alert-success"><strong>본 기업에 대한 예측 기사는 예측 시점 기준으로 2018년까지만 제공됩니다.</strong></div>');
+}
+</script>
+{% endblock script %}

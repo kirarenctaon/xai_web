@@ -1,0 +1,97 @@
+{% extends "web/index.html" %}
+{% load static %}
+
+{% block content %}
+
+<section id="inner-headline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="breadcrumb">
+                  <li>
+                      <a href="#">
+                          <i class="fa fa-home"></i>
+                      </a>
+                      <i class="icon-angle-right"></i>
+                  </li>
+                  <a class="active"><a style="color:white" href ='{% url 'autonews' %}' >Open Data</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="content">
+    <div class="container">
+         <div class="col-lg-6">
+           <div class="pricing-box-alt special">
+               <div class="pricing-heading">
+                <h3><strong>Twitter</strong> Conversation</h3>
+              </div>
+
+           <table class="table table-bordered" style="text-align: center;">
+              <tbody>
+                  <tr>
+                      <td>주요내용</td>
+                      <td>트위터 내 사람들의 대화 코퍼스</td>
+                   </tr>   
+                  <tr>
+                      <td>구축방법</td>
+                      <td>트위터 크롤링 후 reply를 통해 구축</td>
+                   </tr>   
+                  <tr>
+                      <td>데이터 형태</td>
+                      <td>json 텍스트</td>
+                   </tr>   
+                  <tr>
+                      <td>데이터 건수</td>
+                      <td>84,295</td>
+                   </tr>   
+                    <tr>
+                      <td> 다운로드</td> 
+                      <td><a href="/static/upload/Twitter_Conversation_200.zip">Twitter_Conversation_200 </a></td>
+                  </tr>
+              </tbody>
+             </table>
+           </div>
+         </div>
+
+          <div class="col-lg-6">
+           <div class="pricing-box-alt special">
+               <div class="pricing-heading">
+                <h3><strong>10</strong> K</h3>
+              </div>
+<table class="table table-bordered" style="text-align: center;">
+
+              <tbody>
+                  <tr>
+                      <td>주요내용</td>
+                      <td>주식 가격 변화를 설명하는 학습 데이터</td>
+                   </tr>   
+                  <tr>
+                      <td>구축방법</td>
+                      <td>금융보고서에서 이유설명 문장을 수작업을 통해 분류</td>
+                   </tr>   
+                  <tr>
+                      <td>데이터 형태</td>
+                      <td>텍스트</td>
+                   </tr>   
+                  <tr>
+                      <td>데이터 건수</td>
+                      <td>272,255</td>
+                   </tr>   
+                    <tr>
+                      <td> 다운로드</td>  
+                      <td> 해당 데이터는 공문 출간 후 배포 예정 </td>
+                  </tr>
+              </tbody>
+             </table>
+             <br>
+           </div>
+         </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+

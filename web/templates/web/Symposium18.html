@@ -1,0 +1,349 @@
+{% extends "web/index.html" %} {% block content %} {% load static%}
+<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Symposium</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="lead">
+	<div class="row">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#English" data-toggle="tab"><i class="icon-briefcase"></i> English</a></li>
+			<li><a  href ='{% url 'Symposium18_ko' %}' >한국어</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="English">
+				<div class="col-lg-12">
+					<div class="post-image">
+						<div class="post-heading">
+							<img src="/static/img/event/syposium_banner.jpg" style="" /><br><br>
+							<h1>2018 International Explainable AI Symposium</h1>
+							<h4>Friday, October 12th, 2018</h4>
+							<h4>@ COEX Conference North ASEM Hall 202, Seoul KOREA </h4>
+						</div>
+						<div class="col-lg-12">
+							<div class="row">
+								<a href="#Invitation" class="btn btn-danger">Invitation</a>
+								<a href="#Keynote" class="btn btn-primary">Keynote Speakers</a>
+								<a href="#Program" class="btn btn-theme">Program</a>
+								<a href="#Registration" class="btn btn-warning">Registration</a>
+								<a href="#Location" class="btn btn-info">Location</a>
+								<a href="#Contact" class="btn btn-success">Contact</a>
+								<a href="#Organization" class="btn btn-danger">Organization</a>
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<a href="#Invitation" class="btn btn-danger btn-large">Invitation</a>
+					<br>
+					<br>
+					<article>
+						<p>
+							We are pleased to invite you to <strong>2018 International Explainable AI Symposium</strong> sponsored by the Korea Government, Ministry of Science and ICT.
+						There is growing interests on transparent AI technologies which could provide explanation of decisions. Recently, the Korea Government established an Explainable Artificial Intelligence (XAI)
+						Center to build generally applicable XAI systems for healthcare and finance <a href="http://xai.unist.ac.kr/">http://xai.unist.ac.kr/</a>.<br>
+						<br>
+						 We invited top researchers/research organizations actively working on XAI problems. <strong>Prof. Klaus-Robert Müller </strong> (Director, Berlin Big Data Center)
+						and <strong>Mr. David Gunning</strong>(Manager, the DARPA XAI Program) will deliver keynote speeches. Korean researchers who are actively working in the explainable AI project will present their work.<br>
+						<br>
+						 The symposium will be in Seoul Korea, October 12th, 2018 at Seoul COEX. We wish to see many of you in the symposium. <br>
+						<br>
+						<br>
+						<div class="lead" style=" text-align: right; ">
+						 Program Chairs,<br>
+						 Jaesik Choi, Director of UNIST Explainable Artificial Intelligence Center<br>
+						 Seong-Whan Lee, Chairman of Korean Artificial Intelligence Association
+						</div>
+						</p>
+					</article>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+					<div class="row">
+						<div class="col-lg-6">
+							<!-- Description -->
+							<a href="#" class="btn btn-primary btn-large" id="Keynote">Keynote Speakers</a>
+							<br>
+							<br>
+							<ul class="portfolio">
+								<li class="item-thumbs col-lg-6 design">
+								<img src="/static/img/member/muller.png" %} width=300 height=350><br>
+								<strong>Klaus-Robert Müller</strong><br>
+								Berlin Big Data Center<br>
+								</li>
+								<li class="item-thumbs col-lg-6 design">
+								<img src="/static/img/member/david.png" %} width=300 height=350><br>
+								<strong>David Gunning</strong><br>
+								DARPA<br>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+				<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
+							<br>
+							<br>
+							<div class="pricing-box-alt special">
+								<div class="pricing-heading">
+								   <h3><strong>PROGRAM</strong> </h3>
+							    </div>
+							  <table class="table table-bordered">
+								  <thead>
+									<tr style="color: white; background-color:#393a3d;">
+									  <th style="text-align: center;">Time</th>
+									  <th style="text-align: center;">Title</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									  <tr>
+										  <td style="text-align: center;">9:30 - 10:00</td>
+										  <td>Registration</td>
+									  </tr>
+									  <tr>
+										  <td style="text-align: center;">10:00-10:20</td>
+										  <td>
+											  <strong>- Welcome Message</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  Seong-Whan Lee (Korean Artificial Intelligence Association)<br>
+											  <strong>- Congratulatory Message</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  Yong-hyeon Gwon (Ministry of Science and ICT)
+										  </td>
+									  </tr>
+									  <tr style="background-color: #DFDDDD;">
+										  <td colspan="2" style="text-align: center;background-color: #DFDDDD;">
+											  <strong>Session 1. Explainable AI and Its Impact to Our Daily Life</strong>
+										  </td>
+									  </tr>
+									  <tr>
+										  <td style="text-align: center;">10:20-11:20</td>
+										  <td>
+											 <strong>- Keynote 1. Introduction to the DARPA XAI Program<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												 David Gunning (DARPA) </strong>
+										 </td>
+									  </tr>
+								      </tr>
+										  <td rowspan="2" style="text-align: center;">11:20-12:00</td>
+										  <td>- Explainable Artificial Intelligence for Medical Problems<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Kwang Joon Kim (Yonsei Severance Hospital)</strong></td>
+									  </tr>
+									  </tr>
+										  <td>- Action of Korean Companies According to European General Privacy Policy <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Kwang Bae Park (Lee & Ko)</strong></td>
+									  </tr>
+									  <tr>
+										  <td style="text-align: center;">12:00-13:20</td>
+										  <td style="text-align: center;">Lunch</td>
+									  </tr>
+									  <tr style="background-color: #DFDDDD;">
+										  <td colspan="2" style="text-align: center;background-color: #DFDDDD;">
+											  <strong>Session 2. Recent Advances in Explainable AI</strong>
+										  </td>
+									  </tr>
+									  </tr>
+										  <td style="text-align: center;">13:20-14:20</td>
+									  <td><strong>- Keynote 2. Techniques to Explain Deep Learning Models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										  Klaus-Robert Müller (Berlin Big Data Center)<strong></td>
+									  </tr>
+									  </tr>
+										  <td rowspan="2" style="text-align: center;">14:20-15:10</td>
+										  <td>- Explaining and Predicting Financial Time Series <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Jaesik Choi / Byungki Seo (UNIST)</strong></td>
+									  </tr>
+									  </tr>
+										  <td>- Machine learning Technology for Learning Causality of Decision Making<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Seongju Hwang / Eunho Yang (KAIST)</strong></td>
+									  </tr>
+									  <tr>
+										  <td style="text-align: center;">15:10-15:30</td>
+										  <td style="text-align: center;">Coffee Break</td>
+									  </tr>
+									  <tr style="background-color: #DFDDDD;">
+										  <td colspan="2" style="text-align: center;background-color: #DFDDDD;">
+											  <strong>Session 3. Practical Applications of Explainable AI</strong>
+										  </td>
+									  </tr>
+									  </tr>
+										  <td rowspan="3" style="text-align: center;">15:30-17:00</td>
+										  <td>- Explaining the Decision of Autonomous Vehicles<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>NVIDIA</strong></td>
+									  </tr>
+									  </tr>
+									      <td>- Visual and Textual Explanations of Healthcare Data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Seong-Whan Lee / Heung-Il Suk (Korea Univ.)</strong></td>
+									  </tr>
+									  </tr>
+										  <td>- Real-world Applications of Explainable Artificial Intelligence in Healthcare <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											  <strong>Jinkyu Yoo (AItrics)</strong></td>
+									  </tr>
+									  </tr>
+										  <td style="text-align: center;">17:00-17:40</td>
+									  <td><strong>Panel Discussion</strong>	: Future Directions of Explainable Artificial Intelligence Research and Practice</td>
+									  </tr>
+									  </tr>
+										  <td style="text-align: center;">17:40-18:00</td>
+										  <td>Closing Remarks</td>
+									  </tr>
+								  </tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+				<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-warning btn-large" id="Registration">Registration</a>
+							<br>
+							<br>
+							 <table class="table table-bordered" style="text-align: center;">
+								  <thead>
+									<tr style="color: white; background-color:#393a3d;">
+									  <th colspan="2" style="text-align: center; width:1000px">Registration fee</th>
+									  <th style="text-align: center;">Payment Methods</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									  <tr>
+										  <td rowspan="2" style="width:200px">Pre-registration</td>
+										  <td>Adult ₩200,000</td>
+										  <td rowspan="2" style="text-align: left;">
+											- After on-line registration, credit card or bank transfer<br>
+											<a href="http://aiassociation.kr/Conference/ConferenceRegistration.asp?AC=0&CODE=CC20180801&CpPage=R#CONF">
+												http://aiassociation.kr/Conference/ConferenceRegistration.asp?AC=0&CODE=CC20180801&CpPage=R#CONF</a>
+										  </td>
+									  </tr>
+									  <tr>
+										  <td>Student ₩100,000</td>
+									  </tr>
+									  <tr>
+										  <td rowspan="2" style="text-align: center;">On-site registration</td>
+										  <td>Adult ₩250,000</td>
+										  <td rowspan="2" style="text-align: left;">
+											  - Only credit card
+										  </td>
+									  </tr>
+									  <tr>
+										  <td>Student ₩150,000</td>
+									  </tr>
+								  </tbody>
+							  </table>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<a href="#" class="btn btn-info btn-large" id="Location">Location</a>
+					<br>
+					<div class="row"><img src="/static/img/event/englishmap.jpg" style="width:1000px;height:500px;" /><br><br>
+						<div class="col-lg-6">
+							<br>
+								 Coex<br>
+								513, Yeongdong-daero, Gangnam-gu<br>Seoul 06164 Republic of Korea<br><br>
+								<a href="https://goo.gl/maps/tH9cz2FPmSB2" target="_blank"> Open in Google Maps</a><br>
+								<a href="http://naver.me/GbmrgtLi" target="_blank"> Open in Naver Maps </a>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
+							<br><br>
+								<strong>UNIST Explainable Artificial Intelligence Center</strong> / GyeongEun Lee / socool@unist.ac.kr / 052-217-2196<br>
+								<strong>Korean Artificial Intelligence Association </strong> / SooJung Park / kaia@aiassociation.kr / 02-928-5920<br>
+								<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-danger btn-large" id="Organization">Organization</a>
+							<br><br>
+							<img src="/static/img/event/syposium_banner_footer_2018.jpg" style="" /><br><br>
+							<strong>Hosted by</strong> Ministry of Science and ICT, Institute for Information and communications Technology Promotion(IITP)<br>
+							<strong>Organized by</strong> UNIST Explainable Artificial Intelligence Center, Korean Artificial Intelligence Association<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+ {% endblock content %} {% block script %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
+<script>
+		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
+		var mapOptions = {
+		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
+		    zoom: 10
+		};
+		var map = new naver.maps.Map('naver-map', mapOptions);
+		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
+	</script>
+{% endblock script %}
