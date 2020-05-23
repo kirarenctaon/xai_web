@@ -80,7 +80,8 @@ class AutomaticNewsDetail(DetailView):
         autonews = AutoNews.objects.get(pk = pk)
         my_company = autonews.company
         my_datetime = autonews.datetime
-        KST = timezone('Asia/Seoul')
+        #KST = timezone('Asia/Seoul')
+        KST = timezone('UTC')
         
         predict_date = my_datetime.date()+timedelta(days=28)
         today = KST.localize(datetime.now())
