@@ -36,8 +36,8 @@ urlpatterns = [
     url(r'^Symposium/2018/korean/$', views.Symposium_ko, name='Symposium18_ko'),
     url(r'^popups/2018/$', views.Popup, name='popup'),
     url(r'^workshop/2019/$', views.Workshop19, name='Workshop19'),
-    url(r'^Tutorial/2018/$', views.Tutorial19, name='Tutorial19'),
-    url(r'^Tutorial/2018/$', views.Tutorial20, name='Tutorial20'),
+    url(r'^Tutorial/2019/$', views.Tutorial19, name='Tutorial19'),
+    url(r'^Tutorial/2020/$', views.Tutorial20, name='Tutorial20'),
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),
