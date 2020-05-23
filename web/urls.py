@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^popups/2018/$', views.Popup, name='popup'),
     url(r'^workshop/2019/$', views.Workshop19, name='Workshop19'),
     url(r'^Tutorial/2018/$', views.Tutorial19, name='Tutorial19'),
+    url(r'^Tutorial/2018/$', views.Tutorial20, name='Tutorial20'),
 
     #contact
     url(r'^contact/$', views.Contact, name='contact'),

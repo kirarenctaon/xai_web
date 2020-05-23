@@ -181,5 +181,8 @@ def Workshop19(request):
 def Tutorial19(request):
     return render(request, 'web/tutorial19.html')
 
+def Tutorial20(request):
+    return render(request, 'web/tutorial20.html')
+
 def Popup(request):
     return render(request, 'web/popup.html')
