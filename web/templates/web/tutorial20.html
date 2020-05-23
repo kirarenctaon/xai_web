@@ -1,0 +1,206 @@
+{% extends "web/index.html" %} {% block content %} {% load static%}
+<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Tutorial</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="lead">
+	<div class="row">
+		<!--<ul class="nav nav-tabs">-->
+			<!--<li class="active"><a href="#English" data-toggle="tab"><i class="icon-briefcase"></i> English</a></li>-->
+			<!--<li><a  href ='{% url 'Symposium18_ko' %}' >한국어</a></li>-->
+		<!--</ul>-->
+		<div class="tab-content">
+			<div class="tab-pane active" id="English">
+				<div class="col-lg-12">
+					<div class="post-image">
+						<div class="post-heading">
+							<br>
+							<h1>Virtual Tutorial on KDD 2020</h1>
+							<h2>Interpreting and  Explaining Deep  Neural  Networks: A  Perspectiveon Time Series Data</h2>
+							<br>
+						</div>
+						<div class="col-lg-12">
+							<div class="row">
+								<a href="#Introduction" class="btn btn-primary">Abstract</a>
+								<a href="#requirements" class="btn btn-warning">Detailed Descriptions </a>
+								<a href="#Presenters" class="btn btn-info">Presenters</a>
+								<a href="#Program" class="btn btn-theme">Program</a>
+								<a href="#Contact" class="btn btn-success">Contact</a>
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<a href="#" class="btn btn-danger btn-large">Abstract</a>
+					<br>
+					<br>
+					<article>
+						Explainable and interpretable machine learning models and algorithms are important topics which
+						have received growing attention from research, application and administration. Many advanced Deep
+						Neural Networks (DNNs)are often perceived as black-boxes. Researchers would like to be able to
+						interpret what the DNNhas learned in order to identify biases and failure models and improve models.
+						In this tutorial, we will provide a comprehensive overview on methods to analyze deep neural networks
+						and an insight how those XAI methods help us understand time series data.
+					</article>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+					<a href="#" class="btn btn-primary btn-warning" id="requirements">Detailed Descriptions</a>
+					<br>
+					<br>
+					<div class="row">
+						<ul>
+							<li> Overview of Interpreting Deep Neural Networks <br>
+								At first, wewill provide a comprehensive to explain fundamental principles in interpreting and explaining deep neural networks. Thetopic of the talk may include relevance score based methods [Layer Relevance Propagation (LRP),
+								Deep Taylor Decomposition (DTD), PatternNet, and RAP] and gradient based methods [DeConvNet, DeepLIFT, Guided Backprop].
+								We will also present a new perspective by presenting methods on Meta-Explanations [CleverHans] and Neuralization methods [ClusterExplanations].</li>
+							<li>Interpreting Inside of Deep Neural Networks<br>
+								In the last section, wewill present methods to interpreting internal nodes of deep neural networks. Jaesik will start the session by introducing method to visualizechannels of Convolutional Neural Networks [Network Dissection] and Generative Adversarial Networks [GAN Dissection].
+		Then, he will present methods [Convex Hull, Cluster Explanations, E-GBAS]to analyze internal nodes of DNNs by analyzing a set of decision boundaries.When allowed, Jaesik will briefly overview the methods to explain DNNs by using attention methods.</li>
+							<li> Explaining Time Series Data <br>
+In the last section, we will introduce recent explainable methods on Time Series Domain. We will introduce [N-BEATS], a framework performing regression tasks and providing outputs that are interpretable without considerable loss in accuracy. [CPHAP] interprets the decision of temporal neural networks by extracting highly activated periods. Furthermore, this clustered results of this method provide an intuition of understanding data mining.
+								Finally, we will present a method [Automatic Statistician] that predicts time series with a human-readable report, including the reason for prediction.
+								 </li>
+						</ul>
+						<!-- XAI github -->
+						<!-- <br>
+						<a href="https://github.com/OpenXAIProject/PyConKorea2019-Tutorials">https://github.com/OpenXAIProject/PyConKorea2019-Tutorials</a>
+						<b -->
+					</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+
+					<!-- Descriptions -->
+				<div class="row">
+					<div class="col-lg-12">
+					<a href="#" class="btn btn-primary btn-info" id="Presenters">Presenters</a>
+					<br>
+					<br>
+					<div class="row">
+						<img src={% static "img/event/pycon_member2.png" %}><br>
+					</div>
+					</div>
+				</div>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+				<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
+							<br>
+							<br>
+							<div class="pricing-box-alt special">
+								<div class="pricing-heading">
+								   <h3><strong>프로그램</strong> </h3>
+							    </div>
+							 	<table border="1">
+		<tr>
+			<td>Time</td>
+			<td>Lecturer</td>
+			<td>Detail</td>
+		</tr>
+		<tr>
+			<td>50 min</td>
+			<th rowspan="3">Jaesik Choi<br>(KAIST)</br></th>
+			<td>Overview of InterpretingDeep Neural Networks</td>
+		</tr>
+		<tr>
+			<td>50 min</td>
+			<td>Interpreting Inside of Deep Neural Networks</td>
+		</tr>
+		<tr>
+			<td>50 min</td>
+			<td>Explaining TimeSeries Data</td>
+		</tr>
+	</table>							</div>
+						</div>
+					</div>
+					<!-- divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
+								<br><br>
+								UNIST 설명가능인공지능 연구센터<br>
+								 &emsp; <strong>최재식</strong> / jaesik@unist.ac.kr / 052-217-2180<br>
+								 &emsp; <strong>조소희</strong> / shcho@unist.ac.kr / 052-217-2258<br>
+								 &emsp; <strong>허성만</strong>  / smheo@unist.ac.kr / 052-217-2258<br>
+								<br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+ {% endblock content %} {% block script %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
+<script>
+		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
+		var mapOptions = {
+		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
+		    zoom: 10
+		};
+		var map = new naver.maps.Map('naver-map', mapOptions);
+		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
+	</script>
+{% endblock script %}
