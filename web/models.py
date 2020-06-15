@@ -38,6 +38,7 @@ class Publication(models.Model):
     journal = models.CharField(max_length=100)
     publication = models.CharField(max_length=100)
     link = models.CharField(max_length=100)
+    group = models.CharField(max_length=100, null=True)
 
 class Patent(models.Model):
     title = models.CharField(max_length=100)
