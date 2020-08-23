@@ -1,5 +1,4 @@
 {% extends "web/index.html" %} {% block content %} {% load static%}
-<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
 <section id="inner-headline">
 <div class="container">
 	<div class="row">
@@ -32,12 +31,27 @@
 							<br>
 							<h2> <i class="far fa-clock"></i> 1:00 - 5:00PM, 23rd, August 2020</h2>
 							<h2> <i class="fas fa-map-marker-alt"></i> To access our virtual workshop, go to
-								<a href="https://kddvirtual2020.vfairs.com/en/hall#booth-41119">https://kddvirtual2020.vfairs.com/en/hall#booth-41119</a><br></h2>
+								<a href="https://kddvirtual2020.vfairs.com/en/hall#booth-41119">https://kddvirtual2020.vfairs.com/en/hall#booth-41119</a>
+							</h2>
+							<br><br>
 							<h3>
-							<br>For Attendees, we will share a Zoom Link through <b> the Chat Room of the Virtual Platform.</b>
+							For Attendees, we will share a Zoom Link through <b> the Chat Room of the Virtual Platform.</b><br>
 							<br> <p style="color:red">Please note: your log-in will not work until August 23.</p><br>
 							</h3>
 							<br>
+							<img src='/static/img/event/XAI_KDD_Tutorial-vfairs.png'>
+
+							<br>
+							<div class="alert alert-info">
+								<span><strong>Download Presentation Slides Here!! </strong></span><br>
+									<li> <a href="='/static/img/event/XAI_KDD_Tutorial-part1_final.pdf"> Part 1</a></li>
+									<li> <a href="='/static/img/event/XAI_KDD_Tutorial-part2_final.pdf"> Part 2</a></li>
+									<li> <a href="='/static/img/event/XAI_KDD_Tutorial-part3_final.pdf"> Part 3</a></li>
+							</div>
+							<br>
+
+
+
 						</div>
 						<div class="col-lg-12">
 							<div class="row">
@@ -341,15 +355,3 @@
 	</div>
 </div>
 <!-- end divider -->
- {% endblock content %} {% block script %}
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
-<script>
-		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
-		var mapOptions = {
-		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
-		    zoom: 10
-		};
-		var map = new naver.maps.Map('naver-map', mapOptions);
-		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
-	</script>
-{% endblock script %}
