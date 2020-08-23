@@ -355,15 +355,3 @@
 	</div>
 </div>
 <!-- end divider -->
- {% endblock content %} {% block script %}
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
-<script>
-		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
-		var mapOptions = {
-		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
-		    zoom: 10
-		};
-		var map = new naver.maps.Map('naver-map', mapOptions);
-		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
-	</script>
-{% endblock script %}
