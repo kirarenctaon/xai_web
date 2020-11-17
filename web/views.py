@@ -201,7 +201,7 @@ def Symposium_ko(request):
     return render(request, 'web/Symposium18_ko.html')
 
 def Workshop19(request):
-    return render(request, 'web/workshop19.html')
+    return render(request, 'web/workshop20.html')
 
 def Tutorial19(request):
     return render(request, 'web/tutorial19.html')
