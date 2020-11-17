@@ -1,0 +1,243 @@
+{% extends "web/index.html" %} {% block content %} {% load static%}
+<!-- static을 사용하는 모든 개별 html에서 별도로 호출해야함 -->
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Workshop</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="lead">
+	<div class="row">
+		<!--<ul class="nav nav-tabs">-->
+			<!--<li class="active"><a href="#English" data-toggle="tab"><i class="icon-briefcase"></i> English</a></li>-->
+			<!--<li><a  href ='{% url 'Symposium18_ko' %}' >한국어</a></li>-->
+		<!--</ul>-->
+		<div class="tab-content">
+			<div class="tab-pane active" id="Korean">
+				<div class="col-lg-12">
+					<div class="post-image">
+						<div class="post-heading">
+<!--							<center><img width="100" src={% static "img/logos/logo_design.png" %}></center>-->
+							<h1> <img width="80" src={% static "img/logos/logo_design.png" %}> 2020 XAI Online Workshop</h1>
+							<br>
+							<h4>2020년 11월 20일(금) 13:00-17:20</h4>
+							<h4>Zoom link : <a href="https://kaist.zoom.us/j/86920781466)">
+									https://kaist.zoom.us/j/86920781466 </a> </h4>
+						</div>
+					</div>
+					<img width="70%" src={% static "img/event/2020OnlineWorkshop_Poster.png" %}>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+
+					<a href="#" class="btn btn-danger btn-large">Introduction</a>
+					<br>
+					<br>
+					<article>
+						KAIST 설명가능인공지능 연구센터는 과학기술정보통신부의 후원으로 설립된 연구센터로,
+
+지난 2020년 1월 한국과학기술원에 새 터전을 마련하고 고려대학교, 서울대학교, 연세대학교, UNIST와 AITRICS 소속 250여명의 연구원들이 세계적 수준의 연구를 진행하고 있으며, 미국 DARPA, 독일 베를린 빅데이터 센터등 해외 기관과도 활발하게 교류하고 있습니다.
+
+본 센터는 인공지능 모델의 결정을 인간이 이해하고 해석할 수 있는 수준의 설명을 제공하는 설명가능 인공지능(XAI: Explainable Artificial Intelligence)기술을 연구하며, 주요한 결과물을 오픈소스로 홈페이지(http://xai.kaist.ac.kr)를 통하여 공개하고 있습니다.
+
+세계가 주목하는 설명가능 인공지능 연구센터의 2020년 첫 온라인 워크샵에 여러분을 초대하오니 많은 관심 부탁드립니다.
+
+ 					</article>
+					<!-- divider -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="solidline">
+							</div>
+						</div>
+					</div>
+					<!-- end divider -->
+					<!-- Descriptions -->
+
+					<!-- Descriptions -->
+
+					<!-- end divider -->
+					<!-- Descriptions -->
+				<div class="row">
+						<div class="col-lg-12">
+							<a href="#" class="btn btn-theme btn-large" id="Program">Program</a>
+							<br>
+							<br>
+							<div class="pricing-box-alt special">
+								<div class="pricing-heading">
+								   <h3><strong>프로그램</strong> </h3>
+							    </div>
+							  <table class="table table-bordered">
+								  <thead>
+									<tr style="color: white; background-color:#393a3d;">
+									  <th style="text-align: center;">시간</th>
+									  <th style="text-align: center;">내용</th>
+									  <th style="text-align: center;">발표자</th>
+									</tr>
+								  </thead>
+								  <tbody  style="text-align: center;">
+									  <tr  style="background-color: #DFDDDD;">
+										  <td>13:00 - 13:10</td>
+										  <td>개회사 </td>
+										  <td colspan="2">최재식 교수 <br> (KAIST)</td>
+									  </tr>
+									  <tr>
+										  <td>13:10 - 13:25</td>
+										  <td>기계학습을 활용한 금융시장붕괴 감지 </td>
+										  <td>서병기 교수<br> (UNIST)</td>
+									  </tr>
+									  <tr>
+										  <td>13:25 - 13:40</td>
+										  <td>정보이론을 활용한 설명가능한 도메인간 은닉공간 분리 </td>
+										  <td>황형주 연구원<br>(KAIST 김기응 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>13:40 - 13:55</td>
+										  <td>분포-전이 객체 대조 학습을 통한 이상치 탐지 </td>
+										  <td>남준현 연구원<br>(KAIST 신진우 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>13:55 - 14:10</td>
+										  <td>심층신경망의 분류이유에 대한 시각적 설명 기술 </td>
+										  <td>남우정 연구원<br>(고려대 이성환 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>14:10 - 14:25</td>
+										  <td>뇌 자기공명영상을 통한 치매 진단의 시각적 설명 기술</td>
+										  <td>윤지석 연구원<br>(고려대 석흥일 교수 연구실)</td>
+									  </tr>
+
+									  <tr  style="background-color: #DFDDDD;">
+										  <td >14:25 - 14:35</td>
+										  <td colspan="2">쉬는 시간</td>
+									  </tr>
+									  <tr>
+										  <td>14:35 - 14:50</td>
+										  <td>도메인 별 정규화를 활용한 도메인 전이 / 도메인 일반화 학습</td>
+										  <td>서성욱 연구원<br>(서울대 한보형 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>14:50 - 15:05</td>
+										  <td>인과적 설명 기반의 어텐션 지도학습 </td>
+										  <td>최승택 연구원<br>(연세대 황승원 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>15:05 - 15:20</td>
+										  <td>사용자를 고려한 대화모델과 평가모델</td>
+										  <td>이창민 연구원<br>(KAIST 오혜연 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>15:20 - 15:35</td>
+										  <td>주의 집중 신경 프로세스 기반의 상호작용 학습 기술</td>
+										  <td>허자욱 연구원<br>(KAIST 황성주 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>15:35 - 15:50</td>
+										  <td>심층신경망 압축시 설명가능성의 변형과 그 방지</td>
+										  <td>양준용 연구원<br>(KAIST 양은호 교수 연구실)</td>
+									  </tr>
+
+									  <tr  style="background-color: #DFDDDD;">
+										  <td >15:50 - 16:00</td>
+										  <td colspan="2">쉬는 시간</td>
+									  </tr>
+									  <tr>
+										  <td>16:00 - 16:15</td>
+										  <td>다중 대조도 뇌 자기공명영상을 위한 움직임 보정 신경망</td>
+										  <td>이종연 연구원<br>(KAIST 박현욱 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>16:15 - 16:30</td>
+										  <td>변조 기반의 시각적 해석과 객체 왜곡 방지 기술 </td>
+										  <td>김준호 연구원<br>(KAIST 노용만 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>16:30 - 16:45</td>
+										  <td>생성신경망 내부를 예제로 설명하는 인공지능</td>
+										  <td>정해동 연구원<br>(KAIST 최재식 교수 연구실)</td>
+									  </tr>
+									  <tr>
+										  <td>16:45 - 17:00</td>
+										  <td>심층 분할상환 클러스터링 기술</td>
+										  <td>허자욱 연구원<br> (AITRICS)</td>
+									  </tr>
+									  <tr>
+										  <td>17:00 - 17:15</td>
+										  <td>설명가능 인공지능의 의료 적용사례</td>
+										  <td>김광준 교수 <br> (연세의료원)</td>
+									  </tr>
+									  <tr  style="background-color: #f2dede;">
+										  <td >17:15 - 17:20</td>
+										  <td colspan="2">폐회사</td>
+									  </tr>
+								  </tbody>
+							  </table>
+							  *	위 일정은 추후 변경될 수 있습니다.
+							</div>
+						</div>
+					</div>
+					<!-- divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+						<div class="row">
+							<div class="col-lg-12">
+								<a href="#" class="btn btn-success btn-large" id="Contact">Contact</a>
+								<br><br>
+								KAIST 설명가능인공지능 연구센터<br>
+								 &emsp; <strong>최재식</strong> / jaesik@kaist.ac.kr / 031-8022-7530<br>
+								 &emsp; <strong>이언옥</strong> / eunog@kaist.ac.kr / 031-8022-7529<br>
+								<br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="solidline">
+								</div>
+							</div>
+						</div>
+						<!-- end divider -->
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+ {% endblock content %} {% block script %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=g9DAE7AOMF4rEJUbJ0Kr"></script>
+<script>
+		// http://blog.goodkiss.co.kr/entry/ 좌표값 알아내는 사이트
+		var mapOptions = {
+		    center: new naver.maps.LatLng(37.5130620, 127.0586440),
+		    zoom: 10
+		};
+		var map = new naver.maps.Map('naver-map', mapOptions);
+		var marker = new naver.maps.Marker({position: new naver.maps.LatLng(37.5130620, 127.0586440), map:map})
+	</script>
+{% endblock script %}

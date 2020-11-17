@@ -136,6 +136,31 @@ class PublicationTextList(ListView):
         context = {'object_list': object_list, 'acc_num' : acc_num}
         return render(request, self.template_name, context)
 
+class JournalTextList(ListView):
+    model = Publication
+    template_name = 'web/publication.html'
+    queryset = model.objects.order_by('-id')
+    paginate_by = 10 #how much show your list
+
+    def get(self, request):
+        obj = list(Publication.objects.all())
+        obj.reverse()
+
+        paginator = Paginator(obj, self.paginate_by)
+        page = request.GET.get('page') #if your django version 2.0.4 just use get_page
+        if page == None:
+            page = 1
+        object_list = paginator.page(page)
+
+        if object_list.has_next() == False :
+            acc_num = 0
+        else :
+            mod = paginator.count % self.paginate_by
+            acc_num = (paginator.num_pages-int(page)-1) * self.paginate_by + mod
+
+        context = {'object_list': object_list, 'acc_num' : acc_num}
+        return render(request, self.template_name, context)
+
 class PatentTextList(ListView):
     model = Patent
     template_name = 'web/patent.html'
@@ -183,6 +208,9 @@ def Tutorial19(request):
 
 def Tutorial20(request):
     return render(request, 'web/tutorial20.html')
+
+def Workshop20(request):
+    return render(request, 'web/workshop20.html')
 
 def Popup(request):
     return render(request, 'web/popup.html')

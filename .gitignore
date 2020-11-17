@@ -1,0 +1,10 @@
+*.log
+*.pyc
+xai/settings.py
+xai/__pycache__
+static/upload/AutomaticNews
+.idea/
+myvenv/
+web/migrations
+web/__pycache__
+db.splite3
