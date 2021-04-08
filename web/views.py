@@ -212,5 +212,8 @@ def Tutorial20(request):
 def Workshop20(request):
     return render(request, 'web/workshop20.html')
 
+def xai_tutorial(request):
+    return render(request, 'web/xai_tutorial.html')
+
 def Popup(request):
     return render(request, 'web/popup.html')

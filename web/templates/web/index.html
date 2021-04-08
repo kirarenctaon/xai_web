@@ -43,11 +43,17 @@
                 <li class="dropdown">
                 	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Open Source<b class=" icon-angle-down"></b></a>
                 	 <ul class="dropdown-menu">
-				  <li><a href ='{% url 'relatedproject' %}'>Related Project</a></li>
+				  		<li><a href ='{% url 'relatedproject' %}'>Related Project</a></li>
                 	 	<li><a href ='https://github.com/OpenXAIProject'>Github</a></li>
-                                <li><a href ='https://www.youtube.com/channel/UCGxsfIsOry_LdBaPSet2p7g'>Youtube</a></li>
-                                <li><a href ='{% url 'opendata' %}'>Open Data</a></li>			 
-			 </ul>
+						<li><a href ='https://www.youtube.com/channel/UCGxsfIsOry_LdBaPSet2p7g'>Youtube</a></li>
+						<li><a href ='{% url 'opendata' %}'>Open Data</a></li>
+			 		</ul>
+                </li>
+				<li class="dropdown">
+                	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Tutorial<b class=" icon-angle-down"></b></a>
+                	 <ul class="dropdown-menu">
+                	 	<li><a href ='{% url 'xai_tutorial' %}'>XAI Tutorial</a></li>
+					 </ul>
                 </li>
 				<li class="dropdown">
                 	 <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Event<b class=" icon-angle-down"></b></a>
@@ -57,7 +63,7 @@
 						<li><a href ='{% url 'Workshop19' %}'>2019 ICCV Workshop</a></li>
 						<li><a href ='{% url 'Tutorial20' %}'>2020 KDD Tutorial</a></li>
 				 		<li><a href ='{% url 'Workshop20' %}'>2020 Online Workshop</a></li>
-			 </ul>
+					 </ul>
                 </li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>

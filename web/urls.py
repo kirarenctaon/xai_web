@@ -31,6 +31,8 @@ urlpatterns = [
     url(r'^opensource/youtube/$', views.youtubeRedirect, name='youtube'),
     url(r'^opensource/opendata/$', views.OpenData, name='opendata'),
 
+    url(r'^xai_tutorial/$', views.xai_tutorial, name='xai_tutorial'),
+
     # Symposium
     url(r'^Symposium/2018/$', views.Symposium, name='Symposium18'),
     url(r'^Symposium/2018/korean/$', views.Symposium_ko, name='Symposium18_ko'),

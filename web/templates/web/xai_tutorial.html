@@ -1,0 +1,73 @@
+{% extends "web/index.html" %} {% block content %} {% load static%}
+<section id="inner-headline">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="breadcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+				<li class="active">Tutorial</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<section id="content">
+<div class="container">
+	<div class="lead">
+	<div class="row">
+		<div class="tab-content">
+			<div class="tab-pane active" id="English">
+				<div class="col-lg-12">
+					<div class="post-image">
+						<div class="post-heading">
+<!--							<center><h1> <img width="80" src={% static "img/logos/logo_design.png" %}>-->
+<!--								XAI Tutorials</h1></center>-->
+
+<!--							<h3> <i class="fab fa-youtube"></i>한국어 강의</h3>-->
+
+							<a href="#Prerequisites" class="btn btn-danger">Korean</a> <a href="#" class="btn btn-warning btn-large">Beginner</a>
+							<h3>  AI의 사고과정을 설명할 수 있을까_최재식 ㅣ 2020 가을 카오스강연 'Ai X' 6강</h3>
+							<div class="view-txt">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/MMQjmeTmoxQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			</div>
+							</div>
+							<h4> <i class="far fa-file-pdf"></i> <a href="/static/files/KAOS_slide.pdf"> 강의자료 다운로드</a></h4>
+							<h4><i class="fas fa-home"></i> <a href="https://ikaos.org/kaos/apply/view.php?kc_idx=79"> Further Information <a>
+						</div>
+						<br>
+
+<!--						<h3> <i class="fab fa-youtube"></i> English Tutorial</h3>-->
+							<a href="#Program" class="btn btn-theme">English</a>
+							<a href="#Program" class="btn btn-success">Intermediate</a>
+							<h3>KDD2020 Tutorial on <br> Interpreting and Explaining Deep Neural Networks: A Perspective on Time Series Data </h3>
+							<div class="view-txt">
+								<img src="/static/files/KDD_thum.png" width="560" height="315"> </img>
+<!--								<iframe width="560" height="315" src="https://youtu.be/0S4fuIkU_9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			</div>-->
+							</div>
+							<h4> <i class="fab fa-youtube"></i> <a href="https://youtu.be/0S4fuIkU_9E"">Entire Tutorial (Part1~Part3) </a></h4>
+							<h4> <i class="far fa-file-pdf"></i> Download Presentation Slides:
+									<a href="/static/files/2020tutorial/XAI_KDD_Tutorial-part1_final_v2.pdf"> Part 1</a>,
+									<a href="/static/files/2020tutorial/XAI_KDD_Tutorial-part2_final_v2.pdf"> Part 2</a>,
+									<a href="/static/files/2020tutorial/XAI_KDD_Tutorial-part3_final.pdf"> Part 3</a>
+							</h4>
+							<h4><i class="fas fa-home"></i> <a href="http://xai.kaist.ac.kr/Tutorial/2020/"> Further Information <a>
+							</h4>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+
+
+<!-- divider -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="solidline">
+		</div>
+	</div>
+</div>
+<!-- end divider -->
+{% endblock content %}
