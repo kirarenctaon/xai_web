@@ -31,9 +31,11 @@ def ProjectPage(request):
 def NoticeTextList(request):
     return render(request, 'web/notice.html')
 
-def NewsImageList(request):
+def Newsletter(request):
     return render(request, 'web/news.html')
 
+def Newsletter21(request):
+    return render(request, 'web/news21.html')
 #RESEARCH##########################################################################################################################
 
 class AutomaticNews(ListView):

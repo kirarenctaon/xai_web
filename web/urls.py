@@ -13,7 +13,8 @@ urlpatterns = [
     url(r'^about/introduction/$', views.ProjectPage, name='introduction'),
 
     url(r'^news&info/notice/$', views.NoticeTextList, name='notice'),
-    url(r'^news&info/news/$', views.NewsImageList, name='news'),
+    url(r'^news&info/news/$', views.Newsletter, name='news'),
+    url(r'^news&info/news/$', views.Newsletter21, name='news21'),
 
     url(r'^research/automatic_news/$', views.AutomaticNews.as_view(), name='autonews'),
     url(r'^research/automatic_news/list/(?P<company>.+)/$', views.AutomaticNewsList.as_view(), name='autonews_list'),
